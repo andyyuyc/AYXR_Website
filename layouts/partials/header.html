@@ -1,6 +1,7 @@
 <header class="site-header">
   <a href="{{ "/" | relURL }}" class="brand" aria-label="AYXR home">
-    <img src="{{ "images/logo-white.svg" | relURL }}" alt="AYXR" class="brand-logo">
+    <img src="{{ "images/logo-white.svg" | relURL }}" alt="AYXR" class="brand-logo logo-dark">
+    <img src="{{ "images/logo-black.svg" | relURL }}" alt="AYXR" class="brand-logo logo-light">
   </a>
   <nav class="nav">
     {{ $currentURL := .RelPermalink }}
@@ -10,5 +11,9 @@
         <span class="nav-bracket">[</span>{{ .Name | lower }}<span class="nav-bracket">]</span>
       </a>
     {{ end }}
+    <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>
+      <span class="tt-dark">[●dark]</span>
+      <span class="tt-light">[○light]</span>
+    </button>
   </nav>
 </header>

@@ -1,6 +1,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('ayxr-theme');
+      var theme = stored || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    } catch (e) {}
+  })();
+</script>
 <title>{{ if .IsHome }}AYXR — VR & iOS Software Studio{{ else }}{{ .Title }} · AYXR{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <meta property="og:title" content="{{ if .IsHome }}AYXR — VR & iOS Software Studio{{ else }}{{ .Title }} · AYXR{{ end }}">

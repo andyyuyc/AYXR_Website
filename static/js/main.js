@@ -3,6 +3,21 @@
 (function () {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // ---------- theme toggle ----------
+  const toggle = document.querySelector('[data-theme-toggle]');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        document.documentElement.removeAttribute('data-theme');
+        try { localStorage.setItem('ayxr-theme', 'dark'); } catch (e) {}
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        try { localStorage.setItem('ayxr-theme', 'light'); } catch (e) {}
+      }
+    });
+  }
+
   // ---------- typing rotator ----------
   const typedEl = document.querySelector('.typed');
   if (typedEl) {
