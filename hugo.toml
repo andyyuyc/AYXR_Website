@@ -1,0 +1,30 @@
+baseURL = 'https://ayxr.net/'
+languageCode = 'en-us'
+title = 'AYXR'
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term', 'RSS']
+
+[params]
+  description = "AYXR LLC — building VR experiences and iOS applications."
+  email = "connect@ayxr.net"
+  emailSupport = "support@ayxr.net"
+  address = "2808 Avent Ferry Road, Apt 203, Raleigh, NC 27606"
+  founded = "2025"
+  ein = "39-3046661"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
+
+[markup.goldmark.renderer]
+  unsafe = true

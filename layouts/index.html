@@ -1,0 +1,90 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-meta">
+    <span class="hero-meta-item"><span class="status-dot"></span>AYXR / 002</span>
+    <span class="hero-meta-item dim">N 35.7796° · W 78.6382°</span>
+    <span class="hero-meta-item dim">Raleigh, NC</span>
+  </div>
+
+  <div class="hero-logo-wrap">
+    <img src="{{ "images/logo-white.svg" | relURL }}" alt="AYXR" class="hero-logo">
+  </div>
+
+  <div class="hero-tagline">
+    <span class="prompt">$</span>
+    <span class="typed" data-type='["building VR experiences.","building iOS applications.","building things that feel inevitable."]'></span><span class="cursor">_</span>
+  </div>
+
+  <div class="hero-cta">
+    <a href="{{ "/about/" | relURL }}" class="btn">→ what we do</a>
+    <a href="{{ "/contact/" | relURL }}" class="btn btn-ghost">→ get in touch</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">01</span>
+    <h2 class="section-title">// disciplines</h2>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <div class="card-tag">vr</div>
+      <h3 class="card-title">Virtual Reality</h3>
+      <p class="card-text">Immersive applications built for modern XR hardware — from spatial interactions to fully realized virtual environments.</p>
+      <ul class="card-list">
+        <li>Apple Vision Pro · visionOS</li>
+        <li>Meta Quest · Unity / Unreal</li>
+        <li>Spatial computing &amp; interaction design</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-tag">ios</div>
+      <h3 class="card-title">iOS Software</h3>
+      <p class="card-text">Native iOS applications crafted with Swift and SwiftUI — calm interfaces, fast performance, and the kind of detail you notice without naming.</p>
+      <ul class="card-list">
+        <li>Swift · SwiftUI · UIKit</li>
+        <li>iPhone · iPad · Apple Watch</li>
+        <li>Performance &amp; accessibility</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">02</span>
+    <h2 class="section-title">// principles</h2>
+  </div>
+  <div class="principles">
+    <div class="principle">
+      <div class="principle-num">/01</div>
+      <h3>Restraint</h3>
+      <p>Every pixel earns its place. Every line of code has a reason to exist.</p>
+    </div>
+    <div class="principle">
+      <div class="principle-num">/02</div>
+      <h3>Craft</h3>
+      <p>Details no one will notice are the details that make everything feel right.</p>
+    </div>
+    <div class="principle">
+      <div class="principle-num">/03</div>
+      <h3>Velocity</h3>
+      <p>Small team. Fast iteration. Ship things that work, then make them better.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="cta-block">
+    <pre class="codeblock">
+<span class="dim">// next step</span>
+<span class="kw">const</span> <span class="var">project</span> = <span class="kw">await</span> <span class="fn">ayxr</span>({
+  idea: <span class="str">"your idea here"</span>,
+  scope: <span class="str">"vr | ios"</span>,
+});</pre>
+    <a href="{{ "/contact/" | relURL }}" class="btn btn-big">→ start a conversation</a>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,14 @@
+<header class="site-header">
+  <a href="{{ "/" | relURL }}" class="brand" aria-label="AYXR home">
+    <img src="{{ "images/logo-white.svg" | relURL }}" alt="AYXR" class="brand-logo">
+  </a>
+  <nav class="nav">
+    {{ $currentURL := .RelPermalink }}
+    {{ range site.Menus.main }}
+      {{ $active := eq $currentURL .URL }}
+      <a href="{{ .URL | relURL }}" class="nav-link{{ if $active }} is-active{{ end }}">
+        <span class="nav-bracket">[</span>{{ .Name | lower }}<span class="nav-bracket">]</span>
+      </a>
+    {{ end }}
+  </nav>
+</header>
